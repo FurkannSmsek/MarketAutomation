@@ -1,5 +1,6 @@
 ﻿using market.controller;
 using market.enumaration;
+using market.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,18 +33,29 @@ namespace market
         private void btn_giris_Click(object sender, EventArgs e)
         {
             Controller controller = new Controller();
-            LoginStatus result= controller.login(txt_kullaniciAdi.Text, txt_Sifre.Text);
-            if (result == LoginStatus.basarili)
+            User result= controller.login(txt_kullaniciAdi.Text, txt_Sifre.Text);
+            if (result != null && result.status == LoginStatus.basarili && result.yetki == "admin")
             {
-                MessageBox.Show("Böyle bir kullanıcı vardır.");
+                AdminPanel admin = new AdminPanel();
+                admin.Show();
+                this.Hide();
             }
-            else if (result == LoginStatus.basarisiz)
+            else if (result != null && result.status == LoginStatus.basarili && result.yetki == "kasiyer")
             {
-                MessageBox.Show("Böyle bir kullanıcı yoktur.");
+                KasiyerPanel kasiyer = new KasiyerPanel();
+                kasiyer.Show();
+                this.Hide();
+            }
+            else if (result != null && result.status == LoginStatus.basarisiz)
+            {
+                MessageBox.Show("Kullanıcı adı veya şifre hatalı", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
             else {
-                MessageBox.Show("Eksik parametre girildi.");
+                MessageBox.Show("Eksik parametre hatası","Hata",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
+
+
         }
     }
 }

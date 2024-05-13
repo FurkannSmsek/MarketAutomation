@@ -1,5 +1,6 @@
 ﻿using market.dao;
 using market.enumaration;
+using market.model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,19 +13,25 @@ namespace market.controller
     {
         Repository repository;
 
-        public Controller() {
+        public Controller()
+        {
 
             repository = new Repository();
         }
-        public LoginStatus login(string kullaniciAdi, string sifre) {
-
-            if (kullaniciAdi != null && sifre != "")
+        public User login(string kullaniciAdi, string sifre)
+        {
+            User result;
+            if (!string.IsNullOrEmpty(kullaniciAdi) && !string.IsNullOrEmpty(sifre))
             {
-                LoginStatus result = repository.login(kullaniciAdi, sifre);
+                result = repository.login(kullaniciAdi, sifre);
+
                 return result;
             }
-            else {
-                return LoginStatus.eksikParametre;
+            else
+            {
+                User user = new User();
+                user.status = LoginStatus.eksikParametre;
+                return user;
             }
         }
     }
