@@ -19,6 +19,7 @@ namespace market
 
         private void KasiyerPanel_Load(object sender, EventArgs e)
         {
+            timer1.Start();
 
         }
 
@@ -27,6 +28,13 @@ namespace market
             Form1 form1 = new Form1();
             form1.Show();
             this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            lbl_saat.Text = DateTime.Now.Hour.ToString()+":";
+            lbl_dakika.Text = DateTime.Now.Minute.ToString()+":";
+            lbl_saniye.Text = DateTime.Now.Second.ToString();
         }
     }
 }

@@ -18,7 +18,7 @@ namespace market.dao
         int returnvalue;
         public Repository() {
 
-            con = new SqlConnection("Data Source=DESKTOP-C1C9D4M\\SQLEXPRESS;Initial Catalog=market;Integrated Security=True;TrustServerCertificate=True");
+            con = new SqlConnection("Data Source=DESKTOP-C1C9D4M\\SQLEXPRESS;Initial Catalog=market;Integrated Security=True;");
 
 
 
