@@ -119,6 +119,7 @@
             this.label3.Size = new System.Drawing.Size(129, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "Şifremi Unuttum";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Form1
             // 
@@ -153,5 +154,6 @@
         private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.Label label3;
     }
+
 }
 

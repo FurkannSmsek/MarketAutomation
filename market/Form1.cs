@@ -57,5 +57,13 @@ namespace market
 
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            SifreDegistirme SD = new SifreDegistirme();
+            SD.Show();
+            this.Hide();
+
+        }
     }
 }

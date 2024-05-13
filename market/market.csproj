@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>market</RootNamespace>
     <AssemblyName>market</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -81,6 +82,12 @@
     <Compile Include="model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SifreDegistirme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SifreDegistirme.Designer.cs">
+      <DependentUpon>SifreDegistirme.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +110,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SifreDegistirme.resx">
+      <DependentUpon>SifreDegistirme.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="marketDataSet.xsc">
       <DependentUpon>marketDataSet.xsd</DependentUpon>
     </None>
