@@ -28,20 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPanel));
+            this.btn_kullanici = new System.Windows.Forms.Button();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btn_urun = new System.Windows.Forms.Button();
+            this.btn_cikis = new System.Windows.Forms.Button();
+            this.lbl_saat = new System.Windows.Forms.Label();
+            this.lbl_dakika = new System.Windows.Forms.Label();
+            this.lbl_saniye = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
+            // 
+            // btn_kullanici
+            // 
+            this.btn_kullanici.ImageIndex = 0;
+            this.btn_kullanici.ImageList = this.ımageList1;
+            this.btn_kullanici.Location = new System.Drawing.Point(50, 61);
+            this.btn_kullanici.Name = "btn_kullanici";
+            this.btn_kullanici.Size = new System.Drawing.Size(130, 114);
+            this.btn_kullanici.TabIndex = 0;
+            this.btn_kullanici.UseVisualStyleBackColor = true;
+            // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "admin.png");
+            this.ımageList1.Images.SetKeyName(1, "products.png");
+            this.ımageList1.Images.SetKeyName(2, "reject.png");
+            // 
+            // btn_urun
+            // 
+            this.btn_urun.ImageIndex = 1;
+            this.btn_urun.ImageList = this.ımageList1;
+            this.btn_urun.Location = new System.Drawing.Point(241, 61);
+            this.btn_urun.Name = "btn_urun";
+            this.btn_urun.Size = new System.Drawing.Size(130, 114);
+            this.btn_urun.TabIndex = 1;
+            this.btn_urun.UseVisualStyleBackColor = true;
+            // 
+            // btn_cikis
+            // 
+            this.btn_cikis.ImageIndex = 2;
+            this.btn_cikis.ImageList = this.ımageList1;
+            this.btn_cikis.Location = new System.Drawing.Point(153, 200);
+            this.btn_cikis.Name = "btn_cikis";
+            this.btn_cikis.Size = new System.Drawing.Size(130, 114);
+            this.btn_cikis.TabIndex = 2;
+            this.btn_cikis.UseVisualStyleBackColor = true;
+            // 
+            // lbl_saat
+            // 
+            this.lbl_saat.AutoSize = true;
+            this.lbl_saat.Location = new System.Drawing.Point(207, 19);
+            this.lbl_saat.Name = "lbl_saat";
+            this.lbl_saat.Size = new System.Drawing.Size(35, 13);
+            this.lbl_saat.TabIndex = 3;
+            this.lbl_saat.Text = "label1";
+            // 
+            // lbl_dakika
+            // 
+            this.lbl_dakika.AutoSize = true;
+            this.lbl_dakika.Location = new System.Drawing.Point(238, 19);
+            this.lbl_dakika.Name = "lbl_dakika";
+            this.lbl_dakika.Size = new System.Drawing.Size(35, 13);
+            this.lbl_dakika.TabIndex = 4;
+            this.lbl_dakika.Text = "label2";
+            // 
+            // lbl_saniye
+            // 
+            this.lbl_saniye.AutoSize = true;
+            this.lbl_saniye.Location = new System.Drawing.Point(271, 19);
+            this.lbl_saniye.Name = "lbl_saniye";
+            this.lbl_saniye.Size = new System.Drawing.Size(35, 13);
+            this.lbl_saniye.TabIndex = 5;
+            this.lbl_saniye.Text = "label3";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // AdminPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(445, 319);
+            this.Controls.Add(this.lbl_saniye);
+            this.Controls.Add(this.lbl_dakika);
+            this.Controls.Add(this.lbl_saat);
+            this.Controls.Add(this.btn_cikis);
+            this.Controls.Add(this.btn_urun);
+            this.Controls.Add(this.btn_kullanici);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AdminPanel";
             this.Text = "AdminPanel";
             this.Load += new System.EventHandler(this.AdminPanel_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btn_kullanici;
+        private System.Windows.Forms.ImageList ımageList1;
+        private System.Windows.Forms.Button btn_urun;
+        private System.Windows.Forms.Button btn_cikis;
+        private System.Windows.Forms.Label lbl_saat;
+        private System.Windows.Forms.Label lbl_dakika;
+        private System.Windows.Forms.Label lbl_saniye;
+        private System.Windows.Forms.Timer timer1;
     }
 }

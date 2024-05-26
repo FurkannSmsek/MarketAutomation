@@ -19,7 +19,14 @@ namespace market
 
         private void AdminPanel_Load(object sender, EventArgs e)
         {
+            timer1.Start();
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbl_saat.Text = DateTime.Now.Hour.ToString();
+            lbl_dakika.Text = DateTime.Now.Minute.ToString();
+            lbl_saniye.Text = DateTime.Now.Second.ToString();
         }
     }
 }
