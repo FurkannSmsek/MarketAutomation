@@ -1,3 +1,4 @@
+
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,16 +11,31 @@ using System.Windows.Forms;
 
 namespace market
 {
-    public partial class KullaniciPanel : Form
+    public partial class kullaniciPanel : Form
     {
-        public KullaniciPanel()
+        public kullaniciPanel()
         {
             InitializeComponent();
         }
 
-        private void KullaniciPanel_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kullaniciPanel_Load(object sender, EventArgs e)
+        {
+            defaultDegerleriDoldur();
+        }
+
+        private void defaultDegerleriDoldur()
+        {
+            
         }
     }
 }

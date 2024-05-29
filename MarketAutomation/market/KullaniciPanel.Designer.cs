@@ -1,7 +1,7 @@
 ﻿
 namespace market
 {
-    partial class KullaniciPanel
+    partial class kullaniciPanel
     {
         /// <summary>
         /// Required designer variable.
@@ -31,14 +31,14 @@ namespace market
         {
             this.SuspendLayout();
             // 
-            // KullaniciPanel
+            // kullaniciPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 314);
-            this.Name = "KullaniciPanel";
-            this.Text = "KullaniciPanel";
-            this.Load += new System.EventHandler(this.KullaniciPanel_Load);
+            this.ClientSize = new System.Drawing.Size(659, 286);
+            this.Name = "kullaniciPanel";
+            this.Text = "kullaniciPanel";
+            this.Load += new System.EventHandler(this.kullaniciPanel_Load);
             this.ResumeLayout(false);
 
         }
