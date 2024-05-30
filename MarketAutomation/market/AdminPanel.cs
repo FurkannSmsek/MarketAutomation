@@ -28,5 +28,13 @@ namespace market
             lbl_dakika.Text = DateTime.Now.Minute.ToString();
             lbl_saniye.Text = DateTime.Now.Second.ToString();
         }
+
+        private void btn_kullanici_Click(object sender, EventArgs e)
+        {
+            kullaniciPanel kullanici = new kullaniciPanel();
+            kullanici.Show();
+            this.Hide();
+
+        }
     }
 }

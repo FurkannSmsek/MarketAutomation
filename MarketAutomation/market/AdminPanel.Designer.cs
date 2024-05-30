@@ -49,6 +49,7 @@
             this.btn_kullanici.Size = new System.Drawing.Size(130, 114);
             this.btn_kullanici.TabIndex = 0;
             this.btn_kullanici.UseVisualStyleBackColor = true;
+            this.btn_kullanici.Click += new System.EventHandler(this.btn_kullanici_Click);
             // 
             // ımageList1
             // 
@@ -121,7 +122,7 @@
             this.Controls.Add(this.btn_cikis);
             this.Controls.Add(this.btn_urun);
             this.Controls.Add(this.btn_kullanici);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminPanel";
             this.Text = "AdminPanel";
             this.Load += new System.EventHandler(this.AdminPanel_Load);
