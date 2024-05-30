@@ -34,5 +34,12 @@ namespace market.controller
                 return user;
             }
         }
+
+        public Urun urunuGetir(string barkod) {
+            if (!string.IsNullOrEmpty(barkod)) {
+                return repository.urunuGetir(barkod);
+            }
+            return null;
+        }
     }
 }

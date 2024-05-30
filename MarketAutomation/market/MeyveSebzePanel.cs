@@ -1,13 +1,16 @@
 ﻿using AForge.Video.DirectShow;
+using market.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZXing;
 
 namespace market
 {
@@ -125,6 +128,18 @@ namespace market
             lbl_saat.Text = DateTime.Now.Hour.ToString() + ":";
             lbl_dakika.Text = DateTime.Now.Minute.ToString() + ":";
             lbl_saniye.Text = DateTime.Now.Second.ToString();
+
+            if (pctbox_Kamera.Image!=null) {
+
+                BarcodeReader reader = new BarcodeReader();
+                Result result=reader.Decode((Bitmap)pctbox_Kamera.Image);
+
+                if (result!=null) {
+                    textBox1.Text = result.ToString();
+                    timer1.Stop();
+                
+                }
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -142,6 +157,7 @@ namespace market
             vcd = new VideoCaptureDevice(fic[cmb_kameraac.SelectedIndex].MonikerString);
             vcd.NewFrame += Vcd_NewFrame;
             vcd.Start();
+            timer1.Start();
         }
 
         private void Vcd_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
@@ -158,6 +174,17 @@ namespace market
         private void lbl_saat_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            controller.Controller controller = new controller.Controller();
+            Urun tUrun = controller.urunuGetir(textBox1.Text);
+            lbl_urunisim.Text = tUrun.urunIsim.ToString();
+            txt_islem.Text = tUrun.fiyat.ToString();
+            SoundPlayer ses = new SoundPlayer();
+            ses.SoundLocation = "barkod";
+            ses.Play();
         }
     }
 }

@@ -64,5 +64,32 @@ namespace market.dao
 
            
         }
+
+        public Urun urunuGetir(string barkod) {
+
+            con.Open();
+            cmd = new SqlCommand("select * from urun where barkodKod=@code",con);
+            cmd.Parameters.AddWithValue("@code", barkod);
+            dr = cmd.ExecuteReader();
+            Urun urun = new Urun();
+
+            while (dr.Read()) {
+                
+                urun.id = dr["id"].ToString();
+                urun.qrkod = dr["qrkod"].ToString();
+                urun.barkodKod = dr["barkodKod"].ToString();
+                //urun.olusturmaTarih = DateTime.Parse(dr["olusturulma_Tarih"].ToString());    //hata oldu
+               // urun.guncellenmeTarih = DateTime.Parse(dr["guncellenme_Tarih"].ToString());   // hata oldu 
+                urun.urunIsim=dr["urunIsim"].ToString();
+                urun.kilo = int.Parse(dr["kilo"].ToString());
+                urun.fiyat = int.Parse(dr["fiyat"].ToString());
+               // urun.ciro = int.Parse(dr["ciro"].ToString());   //hata oldu 
+            }
+
+
+            con.Close();
+
+            return urun;
+        }
     }
 }
