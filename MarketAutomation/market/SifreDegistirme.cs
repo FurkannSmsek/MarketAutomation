@@ -34,5 +34,12 @@ namespace market
                 grpBox_sifreDegistirmeAlani.Enabled = false;
             }
         }
+
+        private void btn_geri_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Show();
+            this.Hide();
+        }
     }
 }

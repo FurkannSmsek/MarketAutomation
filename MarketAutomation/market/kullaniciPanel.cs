@@ -58,5 +58,100 @@ namespace market
 
             combo_guvenlikSorusu.SelectedIndex = 0;
         }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_kayitSil_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_kayitGuncelle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_kayitEkle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combo_bolge_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combo_yetki_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_sifre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_kullaniciAdi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_emailAdres_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combo_guvenlikSorusu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combo_guvenlikCevabi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_kullaniciAdi_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -114,6 +114,8 @@
     <Compile Include="MeyveSebzePanel.Designer.cs">
       <DependentUpon>MeyveSebzePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="model\LoginTable.cs" />
+    <Compile Include="model\Urun.cs" />
     <Compile Include="model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -122,6 +124,12 @@
     </Compile>
     <Compile Include="SifreDegistirme.Designer.cs">
       <DependentUpon>SifreDegistirme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UrunPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrunPanel.Designer.cs">
+      <DependentUpon>UrunPanel.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
@@ -150,6 +158,9 @@
     </Compile>
     <EmbeddedResource Include="SifreDegistirme.resx">
       <DependentUpon>SifreDegistirme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrunPanel.resx">
+      <DependentUpon>UrunPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="marketDataSet.xsc">
       <DependentUpon>marketDataSet.xsd</DependentUpon>
@@ -202,6 +213,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\camera.ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -41,5 +41,42 @@ namespace market.controller
             }
             return null;
         }
+        public List<Urun> tumUrunleriGetir()
+        {
+            return repository.tumUrunleriGetir();
+        }
+        public LoginStatus urunEkle(Urun urun)
+        {
+            if(!string.IsNullOrEmpty(urun.id) && !string.IsNullOrEmpty(urun.urunIsim) && !string.IsNullOrEmpty(urun.barkodKod))
+                    {
+                return repository.urunEkle(urun);
+            }
+            else
+            {
+                return LoginStatus.eksikParametre;
+            }
+        }
+        public LoginStatus urunGuncelle(Urun urun)
+        {
+            if (!string.IsNullOrEmpty(urun.id) && !string.IsNullOrEmpty(urun.urunIsim) && !string.IsNullOrEmpty(urun.barkodKod))
+            {
+                return repository.urunGuncelle(urun);
+            }
+            else
+            {
+                return LoginStatus.eksikParametre;
+            }
+        }
+        public LoginStatus urunSil(string id)
+        {
+            if(!string.IsNullOrEmpty(id))
+            {
+                return repository.urunSil(id);
+            }
+            else
+            {
+                return LoginStatus.eksikParametre;
+            }
+        }
     }
 }

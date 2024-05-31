@@ -44,9 +44,10 @@
             // 
             this.btn_kullanici.ImageIndex = 0;
             this.btn_kullanici.ImageList = this.ımageList1;
-            this.btn_kullanici.Location = new System.Drawing.Point(50, 61);
+            this.btn_kullanici.Location = new System.Drawing.Point(67, 75);
+            this.btn_kullanici.Margin = new System.Windows.Forms.Padding(4);
             this.btn_kullanici.Name = "btn_kullanici";
-            this.btn_kullanici.Size = new System.Drawing.Size(130, 114);
+            this.btn_kullanici.Size = new System.Drawing.Size(173, 140);
             this.btn_kullanici.TabIndex = 0;
             this.btn_kullanici.UseVisualStyleBackColor = true;
             this.btn_kullanici.Click += new System.EventHandler(this.btn_kullanici_Click);
@@ -63,46 +64,53 @@
             // 
             this.btn_urun.ImageIndex = 1;
             this.btn_urun.ImageList = this.ımageList1;
-            this.btn_urun.Location = new System.Drawing.Point(241, 61);
+            this.btn_urun.Location = new System.Drawing.Point(321, 75);
+            this.btn_urun.Margin = new System.Windows.Forms.Padding(4);
             this.btn_urun.Name = "btn_urun";
-            this.btn_urun.Size = new System.Drawing.Size(130, 114);
+            this.btn_urun.Size = new System.Drawing.Size(173, 140);
             this.btn_urun.TabIndex = 1;
             this.btn_urun.UseVisualStyleBackColor = true;
+            this.btn_urun.Click += new System.EventHandler(this.btn_urun_Click);
             // 
             // btn_cikis
             // 
             this.btn_cikis.ImageIndex = 2;
             this.btn_cikis.ImageList = this.ımageList1;
-            this.btn_cikis.Location = new System.Drawing.Point(153, 200);
+            this.btn_cikis.Location = new System.Drawing.Point(204, 246);
+            this.btn_cikis.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cikis.Name = "btn_cikis";
-            this.btn_cikis.Size = new System.Drawing.Size(130, 114);
+            this.btn_cikis.Size = new System.Drawing.Size(173, 140);
             this.btn_cikis.TabIndex = 2;
             this.btn_cikis.UseVisualStyleBackColor = true;
+            this.btn_cikis.Click += new System.EventHandler(this.btn_cikis_Click);
             // 
             // lbl_saat
             // 
             this.lbl_saat.AutoSize = true;
-            this.lbl_saat.Location = new System.Drawing.Point(207, 19);
+            this.lbl_saat.Location = new System.Drawing.Point(276, 23);
+            this.lbl_saat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_saat.Name = "lbl_saat";
-            this.lbl_saat.Size = new System.Drawing.Size(35, 13);
+            this.lbl_saat.Size = new System.Drawing.Size(46, 17);
             this.lbl_saat.TabIndex = 3;
             this.lbl_saat.Text = "label1";
             // 
             // lbl_dakika
             // 
             this.lbl_dakika.AutoSize = true;
-            this.lbl_dakika.Location = new System.Drawing.Point(238, 19);
+            this.lbl_dakika.Location = new System.Drawing.Point(317, 23);
+            this.lbl_dakika.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_dakika.Name = "lbl_dakika";
-            this.lbl_dakika.Size = new System.Drawing.Size(35, 13);
+            this.lbl_dakika.Size = new System.Drawing.Size(46, 17);
             this.lbl_dakika.TabIndex = 4;
             this.lbl_dakika.Text = "label2";
             // 
             // lbl_saniye
             // 
             this.lbl_saniye.AutoSize = true;
-            this.lbl_saniye.Location = new System.Drawing.Point(271, 19);
+            this.lbl_saniye.Location = new System.Drawing.Point(361, 23);
+            this.lbl_saniye.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_saniye.Name = "lbl_saniye";
-            this.lbl_saniye.Size = new System.Drawing.Size(35, 13);
+            this.lbl_saniye.Size = new System.Drawing.Size(46, 17);
             this.lbl_saniye.TabIndex = 5;
             this.lbl_saniye.Text = "label3";
             // 
@@ -113,16 +121,16 @@
             // 
             // AdminPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(445, 319);
+            this.ClientSize = new System.Drawing.Size(593, 393);
             this.Controls.Add(this.lbl_saniye);
             this.Controls.Add(this.lbl_dakika);
             this.Controls.Add(this.lbl_saat);
             this.Controls.Add(this.btn_cikis);
             this.Controls.Add(this.btn_urun);
             this.Controls.Add(this.btn_kullanici);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminPanel";
             this.Text = "AdminPanel";
             this.Load += new System.EventHandler(this.AdminPanel_Load);

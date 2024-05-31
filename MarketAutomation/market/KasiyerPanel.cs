@@ -36,5 +36,12 @@ namespace market
             lbl_dakika.Text = DateTime.Now.Minute.ToString()+":";
             lbl_saniye.Text = DateTime.Now.Second.ToString();
         }
+
+        private void btn_fruit_Click(object sender, EventArgs e)
+        {
+            MeyveSebzePanel meyve = new MeyveSebzePanel();
+            meyve.Show();
+            this.Hide();
+        }
     }
 }

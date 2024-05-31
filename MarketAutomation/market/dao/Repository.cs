@@ -78,18 +78,107 @@ namespace market.dao
                 urun.id = dr["id"].ToString();
                 urun.qrkod = dr["qrkod"].ToString();
                 urun.barkodKod = dr["barkodKod"].ToString();
-                //urun.olusturmaTarih = DateTime.Parse(dr["olusturulma_Tarih"].ToString());    //hata oldu
-               // urun.guncellenmeTarih = DateTime.Parse(dr["guncellenme_Tarih"].ToString());   // hata oldu 
+                urun.olusturmaTarih = DateTime.Parse(dr["olusturulma_Tarih"].ToString());    //hata oldu
+                urun.guncellenmeTarih = DateTime.Parse(dr["guncellenme_Tarih"].ToString());   // hata oldu 
                 urun.urunIsim=dr["urunIsim"].ToString();
                 urun.kilo = int.Parse(dr["kilo"].ToString());
                 urun.fiyat = int.Parse(dr["fiyat"].ToString());
-               // urun.ciro = int.Parse(dr["ciro"].ToString());   //hata oldu 
+                urun.ciro = int.Parse(dr["ciro"].ToString());   //hata oldu 
             }
 
 
             con.Close();
 
             return urun;
+        }
+        public List<Urun> tumUrunleriGetir()
+        {
+            List<Urun> urunList = new List<Urun>();
+
+            con.Open();
+            cmd = new SqlCommand("select * from urun", con);
+            dr = cmd.ExecuteReader();
+            while(dr.Read())
+            {
+                Urun urun = new Urun();
+                urun.id = dr["id"].ToString();
+                urun.qrkod = dr["qrkod"].ToString();
+                urun.barkodKod = dr["barkodKod"].ToString();
+                urun.olusturmaTarih = DateTime.Parse (dr["olusturulma_Tarih"].ToString());
+                if (!string.IsNullOrEmpty(dr["guncellenme_Tarih"].ToString()))
+                    {
+                    urun.guncellenmeTarih = DateTime.Parse(dr["guncellenme_Tarih"].ToString());
+                }
+                urun.urunIsim = dr["urunIsim"].ToString();
+                urun.kilo = int.Parse(dr["kilo"].ToString());
+                urun.fiyat = int.Parse(dr["fiyat"].ToString());
+                urun.ciro = int.Parse(dr["ciro"].ToString());
+                urunList.Add(urun);
+
+            }
+            con.Close();
+            return urunList;
+        }
+        public LoginStatus urunEkle(Urun urun)
+        {
+            con.Open();
+            cmd = new SqlCommand("sp_urunEkle", con);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", urun.id);
+            cmd.Parameters.AddWithValue("@qrkod", urun.qrkod);
+            cmd.Parameters.AddWithValue("@barkodKod", urun.barkodKod);
+            cmd.Parameters.AddWithValue("@olusturulma_Tarih", urun.olusturmaTarih);
+            cmd.Parameters.AddWithValue("@guncellenme_Tarih", urun.guncellenmeTarih);
+            cmd.Parameters.AddWithValue("@urunIsim", urun.urunIsim);
+            cmd.Parameters.AddWithValue("@kilo", urun.kilo);
+            cmd.Parameters.AddWithValue("@fiyat", urun.fiyat);
+            cmd.Parameters.AddWithValue("@ciro", urun.ciro);
+            int returnvalue = cmd.ExecuteNonQuery();
+            con.Close();
+            if(returnvalue==1)
+            {
+                return LoginStatus.basarili;
+
+            }
+            return LoginStatus.basarisiz;
+        }
+        public LoginStatus urunGuncelle(Urun urun)
+        {
+            con.Open();
+            cmd = new SqlCommand("sp_urunGuncelle", con);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", urun.id);
+            cmd.Parameters.AddWithValue("@qrkod", urun.qrkod);
+            cmd.Parameters.AddWithValue("@barkodKod", urun.barkodKod);
+            cmd.Parameters.AddWithValue("@olusturulma_Tarih", urun.olusturmaTarih);
+            cmd.Parameters.AddWithValue("@guncellenme_Tarih", urun.guncellenmeTarih);
+            cmd.Parameters.AddWithValue("@urunIsim", urun.urunIsim);
+            cmd.Parameters.AddWithValue("@kilo", urun.kilo);
+            cmd.Parameters.AddWithValue("@fiyat", urun.fiyat);
+            cmd.Parameters.AddWithValue("@ciro", urun.ciro);
+            int returnvalue = cmd.ExecuteNonQuery();
+            con.Close();
+            if(returnvalue ==1)
+            {
+                return LoginStatus.basarili;
+            }
+            else
+            {
+                return LoginStatus.basarisiz;
+            }
+        }
+        public LoginStatus urunSil(string id)
+        {
+            con.Open();
+            cmd = new SqlCommand("delete from urun where id=@id", con);
+            cmd.Parameters.AddWithValue("@id", id);
+            int returnvalue = cmd.ExecuteNonQuery();
+            con.Close();
+            if(returnvalue==1)
+            {
+                return LoginStatus.basarili;
+            }
+            return LoginStatus.basarisiz;
         }
     }
 }

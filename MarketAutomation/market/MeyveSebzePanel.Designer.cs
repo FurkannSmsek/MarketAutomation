@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MeyveSebzePanel));
             this.grp_menu = new System.Windows.Forms.GroupBox();
-            this.btn_cikis = new System.Windows.Forms.Button();
+            this.btn_geri = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button2 = new System.Windows.Forms.Button();
@@ -73,8 +73,12 @@
             this.btn_muz = new System.Windows.Forms.Button();
             this.btn_elma = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_kameraKapat = new System.Windows.Forms.Button();
             this.btn_kameraAc = new System.Windows.Forms.Button();
+            this.lbl_urunisim = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmb_kameraac = new System.Windows.Forms.ComboBox();
             this.lbl_saat = new System.Windows.Forms.Label();
@@ -83,10 +87,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pctbox_Kamera = new System.Windows.Forms.PictureBox();
             this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lbl_urunisim = new System.Windows.Forms.Label();
             this.grp_menu.SuspendLayout();
             this.grp_hesapmakinesi.SuspendLayout();
             this.grp_urunler.SuspendLayout();
@@ -96,7 +96,7 @@
             // 
             // grp_menu
             // 
-            this.grp_menu.Controls.Add(this.btn_cikis);
+            this.grp_menu.Controls.Add(this.btn_geri);
             this.grp_menu.Controls.Add(this.button3);
             this.grp_menu.Controls.Add(this.button2);
             this.grp_menu.Controls.Add(this.button1);
@@ -108,14 +108,15 @@
             this.grp_menu.TabStop = false;
             this.grp_menu.Text = "Menu";
             // 
-            // btn_cikis
+            // btn_geri
             // 
-            this.btn_cikis.Location = new System.Drawing.Point(6, 388);
-            this.btn_cikis.Name = "btn_cikis";
-            this.btn_cikis.Size = new System.Drawing.Size(125, 27);
-            this.btn_cikis.TabIndex = 5;
-            this.btn_cikis.Text = "Çıkış ";
-            this.btn_cikis.UseVisualStyleBackColor = true;
+            this.btn_geri.Location = new System.Drawing.Point(6, 388);
+            this.btn_geri.Name = "btn_geri";
+            this.btn_geri.Size = new System.Drawing.Size(125, 83);
+            this.btn_geri.TabIndex = 5;
+            this.btn_geri.Text = "<";
+            this.btn_geri.UseVisualStyleBackColor = true;
+            this.btn_geri.Click += new System.EventHandler(this.btn_geri_Click);
             // 
             // button3
             // 
@@ -587,6 +588,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "QR kod ile barkod okut";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(240, 108);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(123, 22);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // btn_kameraKapat
             // 
             this.btn_kameraKapat.Location = new System.Drawing.Point(163, 52);
@@ -607,12 +616,40 @@
             this.btn_kameraAc.UseVisualStyleBackColor = true;
             this.btn_kameraAc.Click += new System.EventHandler(this.btn_kameraAc_Click);
             // 
+            // lbl_urunisim
+            // 
+            this.lbl_urunisim.AutoSize = true;
+            this.lbl_urunisim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lbl_urunisim.Location = new System.Drawing.Point(129, 108);
+            this.lbl_urunisim.Name = "lbl_urunisim";
+            this.lbl_urunisim.Size = new System.Drawing.Size(79, 17);
+            this.lbl_urunisim.TabIndex = 1;
+            this.lbl_urunisim.Text = "Ürün İsim : ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(52, 108);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(79, 17);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Ürün İsim : ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(237, 84);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 17);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Barkod : ";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 16);
+            this.label1.Size = new System.Drawing.Size(85, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Kamera Seç";
             // 
@@ -629,7 +666,7 @@
             this.lbl_saat.AutoSize = true;
             this.lbl_saat.Location = new System.Drawing.Point(803, 12);
             this.lbl_saat.Name = "lbl_saat";
-            this.lbl_saat.Size = new System.Drawing.Size(33, 16);
+            this.lbl_saat.Size = new System.Drawing.Size(35, 17);
             this.lbl_saat.TabIndex = 4;
             this.lbl_saat.Text = "saat";
             this.lbl_saat.Click += new System.EventHandler(this.lbl_saat_Click);
@@ -639,7 +676,7 @@
             this.lbl_dakika.AutoSize = true;
             this.lbl_dakika.Location = new System.Drawing.Point(842, 12);
             this.lbl_dakika.Name = "lbl_dakika";
-            this.lbl_dakika.Size = new System.Drawing.Size(48, 16);
+            this.lbl_dakika.Size = new System.Drawing.Size(49, 17);
             this.lbl_dakika.TabIndex = 4;
             this.lbl_dakika.Text = "dakika";
             // 
@@ -648,7 +685,7 @@
             this.lbl_saniye.AutoSize = true;
             this.lbl_saniye.Location = new System.Drawing.Point(892, 12);
             this.lbl_saniye.Name = "lbl_saniye";
-            this.lbl_saniye.Size = new System.Drawing.Size(47, 16);
+            this.lbl_saniye.Size = new System.Drawing.Size(49, 17);
             this.lbl_saniye.TabIndex = 4;
             this.lbl_saniye.Text = "saniye";
             // 
@@ -673,42 +710,6 @@
             this.ımageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.ımageList2.ImageSize = new System.Drawing.Size(16, 16);
             this.ımageList2.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(240, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 22);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(237, 84);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 16);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Barkod : ";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(52, 108);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 16);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Ürün İsim : ";
-            // 
-            // lbl_urunisim
-            // 
-            this.lbl_urunisim.AutoSize = true;
-            this.lbl_urunisim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lbl_urunisim.Location = new System.Drawing.Point(129, 108);
-            this.lbl_urunisim.Name = "lbl_urunisim";
-            this.lbl_urunisim.Size = new System.Drawing.Size(71, 16);
-            this.lbl_urunisim.TabIndex = 1;
-            this.lbl_urunisim.Text = "Ürün İsim : ";
             // 
             // MeyveSebzePanel
             // 
@@ -750,7 +751,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_et;
         private System.Windows.Forms.ImageList ımageList1;
-        private System.Windows.Forms.Button btn_cikis;
+        private System.Windows.Forms.Button btn_geri;
         private System.Windows.Forms.GroupBox grp_hesapmakinesi;
         private System.Windows.Forms.GroupBox grp_urunler;
         private System.Windows.Forms.GroupBox groupBox1;

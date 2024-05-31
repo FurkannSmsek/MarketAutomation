@@ -36,5 +36,19 @@ namespace market
             this.Hide();
 
         }
+
+        private void btn_urun_Click(object sender, EventArgs e)
+        {
+            UrunPanel urun = new UrunPanel();
+            urun.Show();
+            this.Hide();
+        }
+
+        private void btn_cikis_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Show();
+            this.Hide();
+        }
     }
 }

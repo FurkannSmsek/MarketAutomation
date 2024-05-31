@@ -16,8 +16,8 @@ namespace market
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Application.Run(new Form1());
-            Application.Run(new MeyveSebzePanel());
+           //  Application.Run(new Form1());
+            Application.Run(new UrunPanel());
 
         }
     }

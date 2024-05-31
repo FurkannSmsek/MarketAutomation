@@ -49,6 +49,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.text_kullaniciadi = new System.Windows.Forms.TextBox();
             this.grpBox_sifreDegistirmeAlani = new System.Windows.Forms.GroupBox();
+            this.btn_geri = new System.Windows.Forms.Button();
             this.grpBox_mailAlani.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.grpBox_sifreDegistirmeAlani.SuspendLayout();
@@ -215,6 +216,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_geri);
             this.groupBox1.Controls.Add(this.button_sorgula);
             this.groupBox1.Controls.Add(this.text_guvenlikCevabi);
             this.groupBox1.Controls.Add(this.label3);
@@ -249,6 +251,16 @@
             this.grpBox_sifreDegistirmeAlani.TabIndex = 7;
             this.grpBox_sifreDegistirmeAlani.TabStop = false;
             this.grpBox_sifreDegistirmeAlani.Text = "Şifre Değiştirme Alanı";
+            // 
+            // btn_geri
+            // 
+            this.btn_geri.Location = new System.Drawing.Point(20, 384);
+            this.btn_geri.Name = "btn_geri";
+            this.btn_geri.Size = new System.Drawing.Size(75, 23);
+            this.btn_geri.TabIndex = 3;
+            this.btn_geri.Text = "<";
+            this.btn_geri.UseVisualStyleBackColor = true;
+            this.btn_geri.Click += new System.EventHandler(this.btn_geri_Click);
             // 
             // SifreDegistirme
             // 
@@ -296,5 +308,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox text_kullaniciadi;
         private System.Windows.Forms.GroupBox grpBox_sifreDegistirmeAlani;
+        private System.Windows.Forms.Button btn_geri;
     }
 }
