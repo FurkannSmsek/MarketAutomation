@@ -71,6 +71,7 @@
             this.btn_sut.Size = new System.Drawing.Size(160, 152);
             this.btn_sut.TabIndex = 1;
             this.btn_sut.UseVisualStyleBackColor = true;
+            this.btn_sut.Click += new System.EventHandler(this.btn_sut_Click);
             // 
             // btn_legume
             // 
@@ -109,7 +110,7 @@
             this.lbl_saat.AutoSize = true;
             this.lbl_saat.Location = new System.Drawing.Point(554, 13);
             this.lbl_saat.Name = "lbl_saat";
-            this.lbl_saat.Size = new System.Drawing.Size(46, 17);
+            this.lbl_saat.Size = new System.Drawing.Size(44, 16);
             this.lbl_saat.TabIndex = 5;
             this.lbl_saat.Text = "label1";
             this.lbl_saat.Click += new System.EventHandler(this.label1_Click);
@@ -119,7 +120,7 @@
             this.lbl_dakika.AutoSize = true;
             this.lbl_dakika.Location = new System.Drawing.Point(605, 13);
             this.lbl_dakika.Name = "lbl_dakika";
-            this.lbl_dakika.Size = new System.Drawing.Size(46, 17);
+            this.lbl_dakika.Size = new System.Drawing.Size(44, 16);
             this.lbl_dakika.TabIndex = 6;
             this.lbl_dakika.Text = "label2";
             // 
@@ -128,13 +129,14 @@
             this.lbl_saniye.AutoSize = true;
             this.lbl_saniye.Location = new System.Drawing.Point(656, 13);
             this.lbl_saniye.Name = "lbl_saniye";
-            this.lbl_saniye.Size = new System.Drawing.Size(46, 17);
+            this.lbl_saniye.Size = new System.Drawing.Size(44, 16);
             this.lbl_saniye.TabIndex = 7;
             this.lbl_saniye.Text = "label3";
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // KasiyerPanel
             // 
