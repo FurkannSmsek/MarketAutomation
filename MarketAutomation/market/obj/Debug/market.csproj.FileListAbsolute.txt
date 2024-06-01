@@ -49,9 +49,6 @@ C:\Users\ADMIN\MarketAutomation\MarketAutomation\market\obj\Debug\market.UrunPan
 C:\Users\ADMIN\MarketAutomation\MarketAutomation\market\bin\Debug\market.exe.config
 C:\Users\ADMIN\MarketAutomation\MarketAutomation\market\bin\Debug\market.exe
 C:\Users\ADMIN\MarketAutomation\MarketAutomation\market\bin\Debug\market.pdb
-C:\Users\ADMIN\MarketAutomation\MarketAutomation\market\bin\Debug\AForge.dll
-C:\Users\ADMIN\MarketAutomation\MarketAutomation\market\bin\Debug\AForge.Video.DirectShow.dll
-C:\Users\ADMIN\MarketAutomation\MarketAutomation\market\bin\Debug\AForge.Video.dll
 C:\Users\ADMIN\MarketAutomation\MarketAutomation\market\bin\Debug\AForge.xml
 C:\Users\ADMIN\MarketAutomation\MarketAutomation\market\bin\Debug\AForge.Video.xml
 C:\Users\ADMIN\MarketAutomation\MarketAutomation\market\bin\Debug\AForge.Video.DirectShow.xml

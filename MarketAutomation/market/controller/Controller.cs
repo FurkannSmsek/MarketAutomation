@@ -86,5 +86,16 @@ namespace market.controller
                 return LoginStatus.eksikParametre;
             }
         }
+        public LoginStatus changePassword(string kullaniciAdi,string sifre)
+        {
+            if(!string.IsNullOrEmpty(kullaniciAdi) && !string.IsNullOrEmpty(sifre))
+            {
+                repository.changePassword(kullaniciAdi, sifre);
+            }
+            else
+            {
+                return LoginStatus.eksikParametre;
+            }
+        }
     }
 }

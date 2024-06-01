@@ -211,5 +211,17 @@ namespace market.dao
             }
             return LoginStatus.basarisiz;
         }
+        public LoginStatus changePassword(string kullaniciAdi,string sifre)
+        {
+            con.Open();
+            cmd = new SqlCommand("sifreGuncelle_sp");
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@kullaniciAdi", kullaniciAdi);
+            cmd.Parameters.AddWithValue("@sifre", sifre);
+            returnvalue = cmd.ExecuteNonQuery();
+            con.Close();
+            return LoginStatus.basarili;
+
+        }
     }
 }
