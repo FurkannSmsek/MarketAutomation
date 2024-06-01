@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using market.controller;
+using market.enumaration;
 using market.model;
 
 namespace market
@@ -28,7 +29,20 @@ namespace market
 
         private void button_sorgula_Click(object sender, EventArgs e)
         {
+            Controller controller = new Controller();
+            LoginStatus result = controller.doAuthentication(text_kullaniciadi.Text.Trim().ToLower(), comboBox_guvenlikSorusu.SelectedItem.ToString(), text_guvenlikCevabi.Text) ;
 
+            if(result == LoginStatus.basarili)
+            {
+                grpBox_mailAlani.Enabled = true;
+            }else if (result == LoginStatus.basarisiz)
+            {
+                MessageBox.Show("Girdiğiniz bilgiler yanlıştır!","Hata", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Girdiğiniz bilgiler Eksiktir!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void SifreDegistirme_Load(object sender, EventArgs e)
