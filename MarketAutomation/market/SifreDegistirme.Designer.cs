@@ -47,9 +47,9 @@
             this.button_sorgula = new System.Windows.Forms.Button();
             this.text_guvenlikCevabi = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_geri = new System.Windows.Forms.Button();
             this.text_kullaniciadi = new System.Windows.Forms.TextBox();
             this.grpBox_sifreDegistirmeAlani = new System.Windows.Forms.GroupBox();
-            this.btn_geri = new System.Windows.Forms.Button();
             this.grpBox_mailAlani.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.grpBox_sifreDegistirmeAlani.SuspendLayout();
@@ -57,9 +57,10 @@
             // 
             // button_degistir
             // 
-            this.button_degistir.Location = new System.Drawing.Point(138, 138);
+            this.button_degistir.Location = new System.Drawing.Point(104, 112);
+            this.button_degistir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_degistir.Name = "button_degistir";
-            this.button_degistir.Size = new System.Drawing.Size(192, 43);
+            this.button_degistir.Size = new System.Drawing.Size(144, 35);
             this.button_degistir.TabIndex = 2;
             this.button_degistir.Text = "Değiştir";
             this.button_degistir.UseVisualStyleBackColor = true;
@@ -67,32 +68,36 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(34, 60);
+            this.label7.Location = new System.Drawing.Point(26, 49);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 17);
+            this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 1;
             this.label7.Text = "Yeni Şifre";
             // 
             // text_yeniSifreTekrar
             // 
-            this.text_yeniSifreTekrar.Location = new System.Drawing.Point(138, 100);
+            this.text_yeniSifreTekrar.Location = new System.Drawing.Point(104, 81);
+            this.text_yeniSifreTekrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.text_yeniSifreTekrar.Name = "text_yeniSifreTekrar";
-            this.text_yeniSifreTekrar.Size = new System.Drawing.Size(192, 22);
+            this.text_yeniSifreTekrar.Size = new System.Drawing.Size(145, 20);
             this.text_yeniSifreTekrar.TabIndex = 1;
             // 
             // text_yeniSifre
             // 
-            this.text_yeniSifre.Location = new System.Drawing.Point(138, 55);
+            this.text_yeniSifre.Location = new System.Drawing.Point(104, 45);
+            this.text_yeniSifre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.text_yeniSifre.Name = "text_yeniSifre";
-            this.text_yeniSifre.Size = new System.Drawing.Size(192, 22);
+            this.text_yeniSifre.Size = new System.Drawing.Size(145, 20);
             this.text_yeniSifre.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 100);
+            this.label5.Location = new System.Drawing.Point(10, 81);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 17);
+            this.label5.Size = new System.Drawing.Size(86, 13);
             this.label5.TabIndex = 1;
             this.label5.Text = "Yeni Şifre Tekrar";
             // 
@@ -104,9 +109,11 @@
             this.grpBox_mailAlani.Controls.Add(this.button_dogrulamaKoduGonder);
             this.grpBox_mailAlani.Controls.Add(this.text_emailadresi);
             this.grpBox_mailAlani.Controls.Add(this.label6);
-            this.grpBox_mailAlani.Location = new System.Drawing.Point(352, 12);
+            this.grpBox_mailAlani.Location = new System.Drawing.Point(264, 10);
+            this.grpBox_mailAlani.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpBox_mailAlani.Name = "grpBox_mailAlani";
-            this.grpBox_mailAlani.Size = new System.Drawing.Size(451, 220);
+            this.grpBox_mailAlani.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBox_mailAlani.Size = new System.Drawing.Size(338, 179);
             this.grpBox_mailAlani.TabIndex = 6;
             this.grpBox_mailAlani.TabStop = false;
             this.grpBox_mailAlani.Text = "Mail Alındı";
@@ -114,94 +121,106 @@
             // 
             // button_onayla
             // 
-            this.button_onayla.Location = new System.Drawing.Point(138, 174);
+            this.button_onayla.Location = new System.Drawing.Point(104, 141);
+            this.button_onayla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_onayla.Name = "button_onayla";
-            this.button_onayla.Size = new System.Drawing.Size(192, 40);
+            this.button_onayla.Size = new System.Drawing.Size(144, 32);
             this.button_onayla.TabIndex = 6;
             this.button_onayla.Text = "Onayla";
             this.button_onayla.UseVisualStyleBackColor = true;
             // 
             // text_dogrulamaKodu
             // 
-            this.text_dogrulamaKodu.Location = new System.Drawing.Point(138, 146);
+            this.text_dogrulamaKodu.Location = new System.Drawing.Point(104, 119);
+            this.text_dogrulamaKodu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.text_dogrulamaKodu.Name = "text_dogrulamaKodu";
-            this.text_dogrulamaKodu.Size = new System.Drawing.Size(192, 22);
+            this.text_dogrulamaKodu.Size = new System.Drawing.Size(145, 20);
             this.text_dogrulamaKodu.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 151);
+            this.label4.Location = new System.Drawing.Point(10, 123);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 17);
+            this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Doğrulama Kodu";
             // 
             // button_dogrulamaKoduGonder
             // 
-            this.button_dogrulamaKoduGonder.Location = new System.Drawing.Point(138, 65);
+            this.button_dogrulamaKoduGonder.Location = new System.Drawing.Point(104, 53);
+            this.button_dogrulamaKoduGonder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_dogrulamaKoduGonder.Name = "button_dogrulamaKoduGonder";
-            this.button_dogrulamaKoduGonder.Size = new System.Drawing.Size(192, 45);
+            this.button_dogrulamaKoduGonder.Size = new System.Drawing.Size(144, 37);
             this.button_dogrulamaKoduGonder.TabIndex = 3;
             this.button_dogrulamaKoduGonder.Text = "Doğrulama Kodu Gönder";
             this.button_dogrulamaKoduGonder.UseVisualStyleBackColor = true;
+            this.button_dogrulamaKoduGonder.Click += new System.EventHandler(this.button_dogrulamaKoduGonder_Click);
             // 
             // text_emailadresi
             // 
-            this.text_emailadresi.Location = new System.Drawing.Point(138, 36);
+            this.text_emailadresi.Location = new System.Drawing.Point(104, 29);
+            this.text_emailadresi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.text_emailadresi.Name = "text_emailadresi";
-            this.text_emailadresi.Size = new System.Drawing.Size(192, 22);
+            this.text_emailadresi.Size = new System.Drawing.Size(145, 20);
             this.text_emailadresi.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 41);
+            this.label6.Location = new System.Drawing.Point(11, 33);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 17);
+            this.label6.Size = new System.Drawing.Size(83, 13);
             this.label6.TabIndex = 1;
             this.label6.Text = "E-mail Adresiniz:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 69);
+            this.label1.Location = new System.Drawing.Point(13, 56);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 17);
+            this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kullanıcı Adı:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 127);
+            this.label3.Location = new System.Drawing.Point(4, 103);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 17);
+            this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Güvenlik Cevabı";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 99);
+            this.label2.Location = new System.Drawing.Point(4, 80);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 17);
+            this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Güvenlik Sorusu";
             // 
             // comboBox_guvenlikSorusu
             // 
             this.comboBox_guvenlikSorusu.FormattingEnabled = true;
-            this.comboBox_guvenlikSorusu.Location = new System.Drawing.Point(128, 92);
+            this.comboBox_guvenlikSorusu.Location = new System.Drawing.Point(96, 75);
+            this.comboBox_guvenlikSorusu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox_guvenlikSorusu.Name = "comboBox_guvenlikSorusu";
-            this.comboBox_guvenlikSorusu.Size = new System.Drawing.Size(192, 24);
+            this.comboBox_guvenlikSorusu.Size = new System.Drawing.Size(145, 21);
             this.comboBox_guvenlikSorusu.TabIndex = 1;
             // 
             // button_sorgula
             // 
-            this.button_sorgula.Location = new System.Drawing.Point(9, 182);
+            this.button_sorgula.Location = new System.Drawing.Point(7, 148);
+            this.button_sorgula.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_sorgula.Name = "button_sorgula";
-            this.button_sorgula.Size = new System.Drawing.Size(311, 43);
+            this.button_sorgula.Size = new System.Drawing.Size(233, 35);
             this.button_sorgula.TabIndex = 3;
             this.button_sorgula.Text = "Sorgula";
             this.button_sorgula.UseVisualStyleBackColor = true;
@@ -209,9 +228,10 @@
             // 
             // text_guvenlikCevabi
             // 
-            this.text_guvenlikCevabi.Location = new System.Drawing.Point(128, 122);
+            this.text_guvenlikCevabi.Location = new System.Drawing.Point(96, 99);
+            this.text_guvenlikCevabi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.text_guvenlikCevabi.Name = "text_guvenlikCevabi";
-            this.text_guvenlikCevabi.Size = new System.Drawing.Size(192, 22);
+            this.text_guvenlikCevabi.Size = new System.Drawing.Size(145, 20);
             this.text_guvenlikCevabi.TabIndex = 2;
             // 
             // groupBox1
@@ -224,18 +244,32 @@
             this.groupBox1.Controls.Add(this.comboBox_guvenlikSorusu);
             this.groupBox1.Controls.Add(this.text_kullaniciadi);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(-3, 12);
+            this.groupBox1.Location = new System.Drawing.Point(-2, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(349, 426);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(262, 346);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Güvenlik Sorusu ile Değiştir";
             // 
+            // btn_geri
+            // 
+            this.btn_geri.Location = new System.Drawing.Point(15, 312);
+            this.btn_geri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_geri.Name = "btn_geri";
+            this.btn_geri.Size = new System.Drawing.Size(56, 19);
+            this.btn_geri.TabIndex = 3;
+            this.btn_geri.Text = "<";
+            this.btn_geri.UseVisualStyleBackColor = true;
+            this.btn_geri.Click += new System.EventHandler(this.btn_geri_Click);
+            // 
             // text_kullaniciadi
             // 
-            this.text_kullaniciadi.Location = new System.Drawing.Point(128, 64);
+            this.text_kullaniciadi.Location = new System.Drawing.Point(96, 52);
+            this.text_kullaniciadi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.text_kullaniciadi.Name = "text_kullaniciadi";
-            this.text_kullaniciadi.Size = new System.Drawing.Size(192, 22);
+            this.text_kullaniciadi.Size = new System.Drawing.Size(145, 20);
             this.text_kullaniciadi.TabIndex = 0;
             // 
             // grpBox_sifreDegistirmeAlani
@@ -245,32 +279,25 @@
             this.grpBox_sifreDegistirmeAlani.Controls.Add(this.text_yeniSifreTekrar);
             this.grpBox_sifreDegistirmeAlani.Controls.Add(this.text_yeniSifre);
             this.grpBox_sifreDegistirmeAlani.Controls.Add(this.label5);
-            this.grpBox_sifreDegistirmeAlani.Location = new System.Drawing.Point(352, 238);
+            this.grpBox_sifreDegistirmeAlani.Location = new System.Drawing.Point(264, 193);
+            this.grpBox_sifreDegistirmeAlani.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpBox_sifreDegistirmeAlani.Name = "grpBox_sifreDegistirmeAlani";
-            this.grpBox_sifreDegistirmeAlani.Size = new System.Drawing.Size(451, 200);
+            this.grpBox_sifreDegistirmeAlani.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBox_sifreDegistirmeAlani.Size = new System.Drawing.Size(338, 162);
             this.grpBox_sifreDegistirmeAlani.TabIndex = 7;
             this.grpBox_sifreDegistirmeAlani.TabStop = false;
             this.grpBox_sifreDegistirmeAlani.Text = "Şifre Değiştirme Alanı";
             // 
-            // btn_geri
-            // 
-            this.btn_geri.Location = new System.Drawing.Point(20, 384);
-            this.btn_geri.Name = "btn_geri";
-            this.btn_geri.Size = new System.Drawing.Size(75, 23);
-            this.btn_geri.TabIndex = 3;
-            this.btn_geri.Text = "<";
-            this.btn_geri.UseVisualStyleBackColor = true;
-            this.btn_geri.Click += new System.EventHandler(this.btn_geri_Click);
-            // 
             // SifreDegistirme
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.grpBox_mailAlani);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpBox_sifreDegistirmeAlani);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SifreDegistirme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SifreDegistirme";

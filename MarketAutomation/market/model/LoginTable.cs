@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace market.model
 {
-    class LoginTable
+    public class LoginTable
     {
         public int id { get; set; }
         public string kullaniciAdi { get; set; }

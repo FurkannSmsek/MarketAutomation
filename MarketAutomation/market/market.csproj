@@ -83,6 +83,7 @@
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="controller\Controller.cs" />
+    <Compile Include="controller\list.cs" />
     <Compile Include="dao\Repository.cs" />
     <Compile Include="enumaration\LoginStatus.cs" />
     <Compile Include="Form1.cs">

@@ -18,6 +18,8 @@ namespace market.controller
 
             repository = new Repository();
         }
+
+       
         public User login(string kullaniciAdi, string sifre)
         {
             User result;
@@ -33,6 +35,12 @@ namespace market.controller
                 user.status = LoginStatus.eksikParametre;
                 return user;
             }
+        }
+
+        public List<LoginTable> getLoginTable()
+        {
+           List<LoginTable> loginTableList = repository.getLoginTable();
+            return loginTableList;
         }
 
         public Urun urunuGetir(string barkod) {

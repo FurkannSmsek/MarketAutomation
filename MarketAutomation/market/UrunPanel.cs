@@ -28,7 +28,7 @@ namespace market
         private void UrunPanel_Load(object sender, EventArgs e)
         {
             defaultAlanlariDoldur();
-            tumUrunleriGetir();
+            //tumUrunleriGetir();
         }
         public void defaultAlanlariDoldur()
         {

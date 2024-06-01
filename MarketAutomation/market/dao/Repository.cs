@@ -15,6 +15,7 @@ namespace market.dao
         SqlConnection con;
         SqlCommand cmd;
         SqlDataReader dr;
+        List<LoginTable> loginTableList;
         int returnvalue;
         public Repository() {
 
@@ -63,6 +64,36 @@ namespace market.dao
             }
 
            
+        }
+
+        public List<LoginTable> getLoginTable()
+        {
+            loginTableList = new List<LoginTable>();
+            try
+            {
+                con.Open();
+                cmd = new SqlCommand("guvenlikSorusuGetir_sp", con);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    LoginTable loginTable = new LoginTable();
+                    loginTable.id = int.Parse(dr["id"].ToString());
+                    loginTable.kullaniciAdi = dr["kullaniciAdi"].ToString();
+                    loginTable.sifre = dr["sifre"].ToString();
+                    loginTable.yetki = dr["yetki"].ToString();
+                    loginTable.kullaniciAdi = dr["kullaniciAdi"].ToString();
+                    loginTable.emailAdres = dr["emailAdres"].ToString();
+                    loginTable.guvenlikSorusu = dr["guvenlikSorusu"].ToString();
+                    loginTable.guvenlikCevabi = dr["guvenlikCevabi"].ToString();
+                    loginTableList.Add(loginTable);
+                }
+                con.Close();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("hata oluştu");
+            }          
+            return loginTableList;
         }
 
         public Urun urunuGetir(string barkod) {

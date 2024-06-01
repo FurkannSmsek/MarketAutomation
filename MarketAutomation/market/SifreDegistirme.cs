@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using market.controller;
+using market.model;
 
 namespace market
 {
@@ -29,9 +31,15 @@ namespace market
 
         private void SifreDegistirme_Load(object sender, EventArgs e)
         {
+            Controller controller = new Controller();
+
+            List<LoginTable> loginTableList = controller.getLoginTable();
+            grpBox_mailAlani.Enabled = false;
+            grpBox_sifreDegistirmeAlani.Enabled = false;
+            
+            foreach(LoginTable lt in loginTableList)
             {
-                grpBox_mailAlani.Enabled = false;
-                grpBox_sifreDegistirmeAlani.Enabled = false;
+                comboBox_guvenlikSorusu.Items.Add(lt.guvenlikSorusu.ToString());
             }
         }
 
@@ -40,6 +48,11 @@ namespace market
             Form1 form = new Form1();
             form.Show();
             this.Hide();
+        }
+
+        private void button_dogrulamaKoduGonder_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
