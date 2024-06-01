@@ -19,8 +19,8 @@ namespace market.dao
         int returnvalue;
         public Repository() {
 
-            con = new SqlConnection("Data Source=DESKTOP-C1C9D4M\\SQLEXPRESS;Initial Catalog=market;Integrated Security=True;");
-
+            //con = new SqlConnection("Data Source=DESKTOP-C1C9D4M\\SQLEXPRESS;Initial Catalog=market;Integrated Security=True;");
+            con = new SqlConnection("Data Source=DESKTOP-C1C9D4M\\SQLEXPRESS;Initial Catalog=market2;User ID=furkan;password=1;");
 
 
         }
@@ -51,7 +51,7 @@ namespace market.dao
                 user.yetki = dr["yetki"].ToString();
                 user.emailAdres = dr["emailAdres"].ToString();
                 user.guvenlikSorusu = dr["guvenlikSorusu"].ToString();
-                user.guvenlikCevabi = dr["guvenlikCevabı"].ToString();
+                //user.guvenlikCevabi = dr["guvenlikCevabı"].ToString();
                 user.status = LoginStatus.basarili;
                 return user;
 
@@ -128,12 +128,12 @@ namespace market.dao
                 urun.id = dr["id"].ToString();
                 urun.qrkod = dr["qrkod"].ToString();
                 urun.barkodKod = dr["barkodKod"].ToString();
-                urun.olusturmaTarih = DateTime.Parse(dr["olusturulma_Tarih"].ToString());    //hata oldu
-                urun.guncellenmeTarih = DateTime.Parse(dr["guncellenme_Tarih"].ToString());   // hata oldu 
+                //urun.olusturmaTarih = DateTime.Parse(dr["olusturulma_Tarih"].ToString());    //hata oldu
+                //urun.guncellenmeTarih = DateTime.Parse(dr["guncellenme_Tarih"].ToString());   // hata oldu 
                 urun.urunIsim=dr["urunIsim"].ToString();
                 urun.kilo = int.Parse(dr["kilo"].ToString());
                 urun.fiyat = int.Parse(dr["fiyat"].ToString());
-                urun.ciro = int.Parse(dr["ciro"].ToString());   //hata oldu 
+                //urun.ciro = int.Parse(dr["ciro"].ToString());   //hata oldu 
             }
 
 

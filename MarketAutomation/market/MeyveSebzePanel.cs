@@ -184,7 +184,7 @@ namespace market
             lbl_urunisim.Text = tUrun.urunIsim.ToString();
             txt_islem.Text = tUrun.fiyat.ToString();
             SoundPlayer ses = new SoundPlayer();
-            ses.SoundLocation = "barkod";
+            ses.SoundLocation = "barkod.wav";
             ses.Play();
         }
 
