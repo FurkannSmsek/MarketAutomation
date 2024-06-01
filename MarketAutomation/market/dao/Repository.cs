@@ -95,7 +95,26 @@ namespace market.dao
             }          
             return loginTableList;
         }
+        public LoginStatus doAuthentication(string kullaniciAdi, string guvenlikSorusu,string guvenlikCevabi)
+        {
+            con.Open();
+            cmd = new SqlCommand("select count(*) from loginTable where kullaniciAdi=@kulad and guvenlikSorusu=@guvSorusu and guvenlikCevabi=@guvCevabi", con);
+            cmd.Parameters.AddWithValue("@kulad", kullaniciAdi);
+            cmd.Parameters.AddWithValue("@guvSorusu", guvenlikSorusu);
+            cmd.Parameters.AddWithValue("@guvCevabi", guvenlikCevabi);
+            returnvalue = (int)cmd.ExecuteScalar();
 
+            con.Close();
+
+            if (returnvalue == 1)
+            {
+                return LoginStatus.basarili;
+            }
+            else
+            {
+                return LoginStatus.basarili;
+            }
+        }
         public Urun urunuGetir(string barkod) {
 
             con.Open();

@@ -42,7 +42,25 @@ namespace market.controller
            List<LoginTable> loginTableList = repository.getLoginTable();
             return loginTableList;
         }
-
+        public LoginStatus doAuthentication(string kullaniciAdi, string guvenlikSorusu, string guvenlikCevabi)
+        {
+            if(!string.IsNullOrEmpty(kullaniciAdi) && !string.IsNullOrEmpty(guvenlikSorusu)&& !string.IsNullOrEmpty(guvenlikCevabi))
+            {
+              LoginStatus result =  repository.doAuthentication(kullaniciAdi, guvenlikSorusu, guvenlikCevabi);
+               if(result == LoginStatus.basarili)
+                {
+                    return result;
+                }
+                else
+                {
+                    return LoginStatus.basarisiz;
+                }
+            }
+            else
+            {
+               return LoginStatus.eksikParametre;
+            }
+        }
         public Urun urunuGetir(string barkod) {
             if (!string.IsNullOrEmpty(barkod)) {
                 return repository.urunuGetir(barkod);
