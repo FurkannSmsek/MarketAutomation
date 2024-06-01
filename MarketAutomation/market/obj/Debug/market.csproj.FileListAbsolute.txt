@@ -102,3 +102,7 @@ C:\Users\furkq\Source\Repos\MarketAutomation1.06.2024V2\MarketAutomation\market\
 C:\Users\furkq\Source\Repos\MarketAutomation1.06.2024V2\MarketAutomation\market\obj\Debug\market.csproj.Up2Date
 C:\Users\furkq\Source\Repos\MarketAutomation1.06.2024V2\MarketAutomation\market\obj\Debug\market.exe
 C:\Users\furkq\Source\Repos\MarketAutomation1.06.2024V2\MarketAutomation\market\obj\Debug\market.pdb
+C:\Users\furkq\source\repos\MarketAutomation1.06.2024V2\MarketAutomation\market\bin\Debug\zxing.dll
+C:\Users\furkq\source\repos\MarketAutomation1.06.2024V2\MarketAutomation\market\bin\Debug\zxing.presentation.dll
+C:\Users\furkq\source\repos\MarketAutomation1.06.2024V2\MarketAutomation\market\bin\Debug\zxing.xml
+C:\Users\furkq\source\repos\MarketAutomation1.06.2024V2\MarketAutomation\market\bin\Debug\zxing.presentation.xml

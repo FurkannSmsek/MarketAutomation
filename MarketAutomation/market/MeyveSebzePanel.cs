@@ -10,7 +10,7 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using ZXing;
+using ZXing;
 
 namespace market
 {
@@ -132,8 +132,8 @@ namespace market
 
             if (pctbox_Kamera.Image!=null) {
 
-              //  BarcodeReader reader = new BarcodeReader();
-               // Result result = reader.Decode((Bitmap)pctbox_Kamera.Image);
+                BarcodeReader reader = new BarcodeReader();
+                Result result = reader.Decode((Bitmap)pctbox_Kamera.Image);
 
                 if (result!=null) {
                    textBox1.Text = result.ToString();
