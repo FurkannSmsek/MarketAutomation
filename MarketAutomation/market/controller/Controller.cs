@@ -110,10 +110,14 @@ namespace market.controller
             {
                 repository.changePassword(kullaniciAdi, sifre);
             }
-            else
-            {
+            
+            
                 return LoginStatus.eksikParametre;
-            }
+            
+        }
+        public string checkEmailAddress(string kullaniciAdi)
+        {
+           return repository.checkEmailAddress(kullaniciAdi);
         }
     }
 }

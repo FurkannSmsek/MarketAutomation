@@ -68,21 +68,30 @@ namespace market
 
         private void button_dogrulamaKoduGonder_Click(object sender, EventArgs e)
         {
-            Random rdn = new Random();
-            code = rdn.Next(111111,999999);
-            MailAddress mailAlan = new MailAddress(text_emailadresi.Text, "Eray Emerce");
-            MailAddress mailGonderen = new MailAddress("darkside291@hotmail.com", "Eray Emercee");
-            MailMessage mesaj = new MailMessage();
-            mesaj.To.Add(mailAlan);
-            mesaj.From = mailGonderen;
-            mesaj.Subject = "Şifre Değiştirme";
-            mesaj.Body = "Şifrenizi değiştirmek için doğrulama kodunuz : " + code;
+            Controller controller = new Controller();
+            string emailAdres = controller.checkEmailAddress(text_kullaniciadi.Text);
+            if (emailAdres == text_emailadresi.Text)
+            {
+                Random rdn = new Random();
+                code = rdn.Next(111111, 999999);
+                MailAddress mailAlan = new MailAddress(text_emailadresi.Text, text_kullaniciadi.Text);
+                MailAddress mailGonderen = new MailAddress("darkside291@hotmail.com", "Eray Emercee");
+                MailMessage mesaj = new MailMessage();
+                mesaj.To.Add(mailAlan);
+                mesaj.From = mailGonderen;
+                mesaj.Subject = "Şifre Değiştirme";
+                mesaj.Body = "Şifrenizi değiştirmek için doğrulama kodunuz : " + code;
 
-            SmtpClient smtp = new SmtpClient("smtp.live.com", 587);
-            smtp.Credentials = new System.Net.NetworkCredential("darkside291@hotmail.com", "!1eR4y+1*2k!#");
-            smtp.EnableSsl = true;
-            smtp.Send(mesaj);
-            MessageBox.Show("Doğrulama Kodu Gönderildi. :)", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SmtpClient smtp = new SmtpClient("smtp.live.com", 587);
+                smtp.Credentials = new System.Net.NetworkCredential("darkside291@hotmail.com", "!1eR4y+1*2k!#");
+                smtp.EnableSsl = true;
+                smtp.Send(mesaj);
+                MessageBox.Show("Doğrulama Kodu Gönderildi. :)", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Hesabınıza bağlı mail adresini giriniz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
 
@@ -98,6 +107,11 @@ namespace market
                 grpBox_sifreDegistirmeAlani.Enabled = true;
 
             }
+            else
+            {
+                MessageBox.Show("Doğrulama kodunuz yanlıştır!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void button_degistir_Click(object sender, EventArgs e)
@@ -105,10 +119,22 @@ namespace market
             Controller controller = new Controller();
             if(text_yeniSifre.Text == text_yeniSifreTekrar.Text)
             {
-            Log controller.changePassword(text_kullaniciadi.Text,text_yeniSifre.Text);
+            LoginStatus result = controller.changePassword(text_kullaniciadi.Text,text_yeniSifre.Text);
+                if(result==LoginStatus.basarili)
+                {
+                    MessageBox.Show("Şifreniz değiştirilmiştir.", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Gerekli alanları doldurunuz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("İki şifre birbirleriyle aynı değil!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-            
         }
     }
 }
